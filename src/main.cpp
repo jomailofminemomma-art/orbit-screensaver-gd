@@ -7,7 +7,6 @@
 #include <Geode/modify/CCKeyboardDispatcher.hpp>
 #include "BlurAPI.hpp"
 #include <box2d/box2d.h>
-#include "BlurAPI.hpp"
 
 using namespace geode::prelude;
 using namespace cocos2d;
@@ -242,6 +241,7 @@ class ScreensaverLayer : public CCLayerColor {
         // setup blur if bgType == blur
         if(bgType == "blur" && BlurAPI::isBlurAPIEnabled())
             BlurAPI::addBlur(this);
+        BlurAPI::addBlur(this); 
 
         loadBackgroundImage();
 
